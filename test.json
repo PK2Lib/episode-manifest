@@ -1,0 +1,36 @@
+{
+  "id": 1,
+  "date": "2003-09-02",
+  "episodeName": "Rooster Island 2",
+  "downloadLink": [
+    {
+      "linkName": "Version 1.0",
+      "linkURL": "URL1"
+    }
+  ],
+  "authors": [
+    {
+      "name": "Janne Kivilahti",
+      "url": null
+    }
+  ],
+  "authorURL": "http://pistegamez.net/",
+  "numberOfMaps": 13,
+  "filesize": "533 kB",
+  "description": "The second official episode by Janne",
+  "review": {
+    "text": "Read here",
+    "reviewURL": "URL"
+  },
+  "tested": false,
+  "screenshots": [
+    {"imgURL": "http://kiwi.mbnet.fi/pistegamez/pk2/SHOT_12.gif"},
+    {"imgURL": "http://kiwi.mbnet.fi/pistegamez/pk2/SHOT_13.gif"},
+    {"imgURL": "http://kiwi.mbnet.fi/pistegamez/pk2/SHOT_14.gif"},
+    {"imgURL": "http://kiwi.mbnet.fi/pistegamez/pk2/SHOT_15.gif"},
+    {"imgURL": "http://kiwi.mbnet.fi/pistegamez/pk2/SHOT_16.gif"},
+    {"imgURL": "http://kiwi.mbnet.fi/pistegamez/pk2/SHOT_17.gif"},
+    {"imgURL": "http://kiwi.mbnet.fi/pistegamez/pk2/SHOT_18.gif"},
+    {"imgURL": "http://kiwi.mbnet.fi/pistegamez/pk2/SHOT_19.gif"}
+  ]
+}
