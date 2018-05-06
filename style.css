@@ -1,0 +1,31 @@
+/* Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    z-index: 0;
+}
+
+article, aside, details, figure, footer, header, main, nav, section, summary {
+    display: block;
+}
+
+img {
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    max-width: 100%;
+}
+
+header, main, footer {
+    width: 100%;
+    max-width: 48rem;
+    background-color: antiquewhite;
+    margin: auto;
+    min-height: 100px;
+    box-sizing: border-box;
+    padding: 0 4rem;
+}
