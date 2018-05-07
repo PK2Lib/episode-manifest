@@ -20,12 +20,101 @@ img {
     max-width: 100%;
 }
 
+html, body {
+    width: 100%;
+    height: 100%;
+    font-family: "Chelsea Market", "Verdana", sans-serif;
+    background: transparent;
+    color: #000000;
+}
+
+@media screen and (min-width: 1900px) {
+    html {
+        font-size: 1.25rem;
+    }
+}
+
 header, main, footer {
     width: 100%;
     max-width: 48rem;
-    background-color: antiquewhite;
-    margin: auto;
-    min-height: 100px;
+    margin: 0.5rem auto;
     box-sizing: border-box;
-    padding: 0 4rem;
+    padding: 1rem 4rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 3pt 6pt rgba(0, 0, 0, 0.5), 0 0 6pt rgba(0, 0, 0, 0.5) inset;
+}
+
+header {
+    background-color: rgba(244, 67, 54, 0.9);
+}
+
+main {
+    background-color: rgba(76, 175, 80, 0.9);
+}
+
+footer {
+    background-color: rgba(33, 150, 243, 0.9);
+}
+
+header, footer {
+    text-align: center;
+}
+
+input, textarea {
+    font-family: "Chelsea Market", "Verdana", sans-serif;
+    padding: 0.1rem;
+    font-size: 1rem;
+    border: 0.1rem solid rgba(0, 0, 0, 0.75);
+}
+
+#bg-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+form div, h2 {
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    border-bottom: 0.05rem solid rgba(0, 0, 0, 0.5);
+}
+
+p {
+    padding: 0.25rem 0;
+}
+
+#submit {
+    border-radius: 0.25rem;
+    background: #FFFFFF linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+}
+
+#submit:hover {
+    border-color: #000000;
+}
+
+::-moz-selection {
+    color: rgba(0, 0, 0, 0.8);
+    background: rgba(255, 255, 255, 0.8);
+}
+
+::selection {
+    color: rgba(0, 0, 0, 0.8);
+    background: rgba(255, 255, 255, 0.8);
+}
+
+input.required, textarea.required {
+    border-color: #B71C1C;
+    box-shadow: 0 0 6pt #B71C1C, 0 0 6pt #B71C1C inset;
+}
+
+h3.required::after {
+    content: " *";
+    color: #B71C1C;
+}
+
+p.required {
+    font-size: 0.75em;
+    color: #B71C1C;
+    margin-bottom: 2rem;
 }

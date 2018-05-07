@@ -3,8 +3,13 @@
     <head>
         <meta charset="UTF-8">
         <title>Episode Manifest Form</title>
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Chelsea+Market&subset=latin,latin-ext"/>
         <link rel="stylesheet" href="style.css" />
+        <script src="Blob.js"></script>
+        <script src="FileSaver.js"></script>
         <script src="manifest.js"></script>
+        <script type="text/javascript" src="https://pk2lib.github.io/js/require.js"></script>
+        <script type="text/javascript" src="https://pk2lib.github.io/js/pk2_bg.js"></script>
     </head>
     <body>
         <header>
@@ -12,64 +17,68 @@
         </header>
         <main>
             <form>
-                <section>
-                    <h2>Episode Information</h2>
-                    <div>
-                        <label for="episodeName">
-                            <h3>Episode name</h3>
-                            <p>Enter the name of your episode.</p>
-                        </label>
-                        <input id="episodeName" name="episodeName" type="text" />
-                    </div>
-                    <div>
-                        <label for="authorNames">
-                            <h3>Episode Author(s)</h3>
-                            <p>
-                                Enter the name(s) of the authors of the episode. If there are multiple authors, write
-                                each author on a separate line.
-                            </p>
-                        </label>
-                        <textarea id="authorNames" name="authorNames" rows="4" cols="50"></textarea>
-                    </div>
-                    <div>
-                        <label for="authorURLs">
-                            <h3>Author URLs</h3>
-                            <p>
-                                If you wish to have a link to your website or something else, add a URL for each author.
-                                If an author does not (want to) have a link, leave the row for that author blank. (If
-                                no-one has a link, then leave the whole field blank.)
-                            </p>
-                        </label>
-                        <textarea id="authorURLs" name="authorURLs" rows="4" cols="50"></textarea>
-                    </div>
-                    <div>
-                        <label for="numberOfMaps">
-                            <h3>Number of maps</h3>
-                            <p>Enter here the number of maps in your episode (i.e. the number of playable levels).</p>
-                        </label>
-                        <input id="numberOfMaps" name="numberOfMaps" type="number" />
-                    </div>
-                    <div>
-                        <label for="filesize">
-                            <h3>Filesize</h3>
-                            <p>Enter here the size of your zip file that you submitted us, in kilobytes (kB).</p>
-                        </label>
-                        <input id="filesize" name="filesize" type="text" />
-                    </div>
-                    <div>
-                        <label for="description">
-                            <h3>Description</h3>
-                            <p>
-                                Write here the description of your episode. The description will be visible to people
-                                downloading your episode.
-                            </p>
-                        </label>
-                        <textarea id="description" name="description"></textarea>
-                    </div>
-                    <input id="submit" name="submit" type="submit" value="Submit" />
-                </section>
+                <h2>Episode Information</h2>
+                <div>
+                    <label for="episodeName">
+                        <h3>Episode name</h3>
+                        <p>Enter the name of your episode.</p>
+                    </label>
+                    <input id="episodeName" name="episodeName" type="text" required/>
+                </div>
+                <div>
+                    <label for="authorNames">
+                        <h3>Episode Author(s)</h3>
+                        <p>
+                            Enter the name(s) of the authors of the episode. If there are multiple authors, write
+                            each author on a separate line.
+                        </p>
+                    </label>
+                    <textarea id="authorNames" name="authorNames" rows="4" cols="25" required></textarea>
+                </div>
+                <div>
+                    <label for="authorLinks">
+                        <h3>Author URLs</h3>
+                        <p>
+                            If you wish to have a link to your website or something else, add a URL for each author.
+                            If an author does not (want to) have a link, leave the row for that author blank. If
+                            no-one has a link, then leave the whole field blank. Example: if you have two authors and
+                            the first one does not have a link while the second one does, leave one empty line and put
+                            the second author’s link on the second line.
+                        </p>
+                    </label>
+                    <textarea id="authorLinks" name="authorLinks" rows="4" cols="25"></textarea>
+                </div>
+                <div>
+                    <label for="numberOfMaps">
+                        <h3>Number of maps</h3>
+                        <p>Enter here the number of maps in your episode (i.e. the number of playable levels).</p>
+                    </label>
+                    <input id="numberOfMaps" name="numberOfMaps" type="number" step="1" min="1" required/>
+                </div>
+                <div>
+                    <label for="filesize">
+                        <h3>Filesize</h3>
+                        <p>Enter here the size of your zip file that you submitted us, in kilobytes (kB).</p>
+                    </label>
+                    <input id="filesize" name="filesize" type="number" step="0.01" required/>
+                </div>
+                <div>
+                    <label for="description">
+                        <h3>Description</h3>
+                        <p>
+                            Write here the description of your episode. The description will be visible to people
+                            downloading your episode.
+                        </p>
+                    </label>
+                    <textarea id="description" name="description" rows="8" cols="50"></textarea>
+                </div>
+                <p class="required">* Required</p>
+                <input id="submit" name="submit" type="submit" value="Submit & download manifest" required/>
             </form>
         </main>
         <footer>&copy; 2018 PK2Lib</footer>
+        <canvas id="bg-canvas">Your browser does not support the canvas element. Which probably means you should
+            update your browser because it is so old that it is probably not safe for browsing anyway.
+        </canvas>
     </body>
 </html>
